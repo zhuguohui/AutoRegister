@@ -1,6 +1,25 @@
+
+buildscript {
+    repositories {
+
+        maven { url "https://jitpack.io" }
+
+    }
+    dependencies {
+
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
+
+        //
+    }
+}
+
 plugins {
     id 'java-library'
+
 }
+
+apply plugin: 'com.github.dcendents.android-maven'
+group='com.github.zhuguohui'
 
 java {
     sourceCompatibility = JavaVersion.VERSION_1_7
