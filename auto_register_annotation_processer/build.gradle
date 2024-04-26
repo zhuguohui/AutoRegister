@@ -1,0 +1,22 @@
+plugins {
+    id 'java-library'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+dependencies {
+    implementation project(path: ':auto_register_annotation')
+    // 添加 JavaPoet 库依赖
+    implementation 'com.squareup:javapoet:1.13.0' // 替换为最新版本
+
+    // 如果你使用的是注解处理器
+    annotationProcessor 'com.squareup:javapoet:1.13.0'
+
+    // auto-service
+
+    implementation 'com.google.auto.service:auto-service:1.0-rc6'
+    annotationProcessor 'com.google.auto.service:auto-service:1.0-rc6'
+}
